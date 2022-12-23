@@ -12,6 +12,7 @@
   font-weight: 700;
   flex: 1;
   text-align: center;
+  margin-bottom: 4rem;
 }
 .newsHeader.dark {
   color: var(--text-dark);

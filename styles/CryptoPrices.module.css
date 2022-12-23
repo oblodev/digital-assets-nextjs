@@ -75,7 +75,7 @@
   box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.08);
   font-weight: 500;
   border-radius: 10px;
-  border: 1px solid var(--violett);
+  border: 3px solid var(--violett);
   transition: all 0.35s ease-in-out;
 }
 .more a.dark {
