@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--bgSecondary);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transition: all 0.35s ease-in-out;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  .logo {
+    height: 80px;
+  }
+}
+
+.linksWrapper {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.linksWrapper ul {
+  display: flex;
+  flex-direction: row;
+}
+.linksWrapper li {
+  margin: 0 1rem;
+  cursor: pointer;
+  flex-direction: column;
+  list-style-type: none;
+}
+.linksWrapper a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: all 0.3s ease-in-out;
+}
+.linksWrapper a.dark {
+  color: #fff;
+}
+.linksWrapper a:hover {
+  color: var(--violett);
+}
+
+@media screen and (max-width: 450px) {
+  .linksWrapper {
+    display: none;
+  }
+}
+
+.navbarSide {
+  margin-right: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.navbarSide div {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  padding: 1rem;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: var(--violett);
+}
+.navbarSide div svg {
+  width: 30px;
+  height: 30px;
+  color: var(--text-primary);
+  margin: 0.5rem 1rem;
+  color: #fff;
+}
+.navbarSide div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navbarSide div ul li {
+  margin: 1rem;
+}
+.navbarSide div ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.36s ease-in-out;
+}
+.navbarSide div ul li a:hover {
+  color: yellow;
+}
+.navbarSideIcon {
+  width: 24px;
+  height: 24px;
+}
+.navbarSideIcon.dark {
+  color: var(--text-dark);
+}
+@media screen and (min-width: 900px) {
+  .navbarSideIcon {
+    display: none;
+  }
+}
+
+.navbarMode svg {
+  margin-top: 3px;
+}
+.navbarModeIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+.x {
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}

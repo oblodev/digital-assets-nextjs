@@ -1,0 +1,105 @@
+.container {
+  padding: 0.5rem 1rem;
+  background: #fff;
+  box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border-top: 3px solid var(--violett);
+  width: 1200px;
+  transition: all 0.35s ease-in-out;
+}
+.container.dark {
+  background-color: var(--bgDarkCard);
+}
+@media screen and (max-width: 420px) {
+  .container {
+    max-width: 400px;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 421px) {
+  .container {
+    max-width: 600px;
+    font-size: 0.8rem !important;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 801px) {
+  .container {
+    font-size: 0.9rem !important;
+    width: 900px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    font-size: 1rem !important;
+    width: 980px;
+  }
+}
+
+.thead {
+  border-radius: 20px !important;
+}
+.th {
+  padding: 1rem !important;
+  background-color: var(--bgSecondary);
+}
+@media screen and (max-width: 1000px) {
+  .th {
+    padding: 0.5rem 0.2rem !important;
+    font-size: 1rem;
+  }
+}
+.td {
+  padding: 1.4rem 1rem !important;
+  font-weight: 400 !important;
+}
+@media screen and (max-width: 420px) {
+  .td {
+    padding: 1rem !important;
+    font-size: 0.9rem;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .td {
+    padding: 1rem 0.25rem !important;
+    font-size: 0.9rem;
+  }
+}
+.tbody {
+  border-bottom: 1px solid var(--violett) !important;
+}
+.tableHeadRow {
+  padding: 1rem !important;
+}
+.cryptoName {
+  font-weight: 700 !important;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-top: 0.725rem;
+}
+.cryptoLogo {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+}
+@media screen and (max-width: 420px) {
+  .ds {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 421px) {
+  .ds {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .maxK {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .maxK {
+    display: none;
+  }
+}
