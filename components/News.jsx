@@ -25,7 +25,7 @@ function News({ germanNews }) {
         className={styles.newsShow}
       >
         {germanNews ? (
-          germanNews.slice(0, 6).map((news) => (
+          germanNews.slice(0, 9).map((news) => (
             <a href={news.url} target="_blank" rel="noreferrer">
               <div className={styles.newsCard}>
                 <div className={styles.newsHead}>

@@ -12,11 +12,13 @@
   font-weight: 700;
   flex: 1;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
+
 .newsHeader.dark {
   color: var(--text-dark);
 }
+
 @media screen and (max-width: 420px) {
   .newsHeader {
     font-size: 1.2rem;
@@ -107,12 +109,16 @@
   flex-direction: column;
   margin-bottom: 1rem;
 }
+
+.newsShow .newsCard .newsHead:hover {
+  color: #f91e5a;
+}
 .newsShow .newsCard .news-head h3 {
   font-size: 1.15rem;
   font-weight: 700;
 }
 .newsShow .newsCard .news-head h3:hover {
-  color: var(--red);
+  color: #f91e5a;
 }
 .newsShow .newsCard img {
   max-width: 260px;
@@ -132,7 +138,8 @@
 }
 .newsShow .newsCard .newsInfos .newsRights {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
 }
 @media screen and (max-width: 420px) {
   .newsShow .newsCard .newsInfos .newsRights {
@@ -140,7 +147,7 @@
   }
 }
 .newsShow .newsCard .newsInfos .newsTime {
-  font-size: 13px;
+  font-size: 10px;
 }
 @media screen and (max-width: 420px) {
   .newsShow .nnewsCard .newsInfos .newsTime {

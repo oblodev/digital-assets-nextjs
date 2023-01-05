@@ -10,19 +10,19 @@
 .container.dark {
   background-color: var(--bgDarkCard);
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .container {
-    max-width: 400px;
+    max-width: 425px;
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 800px) and (min-width: 421px) {
+@media screen and (max-width: 899px) and (min-width: 451px) {
   .container {
     max-width: 600px;
     font-size: 0.8rem !important;
   }
 }
-@media screen and (max-width: 1000px) and (min-width: 801px) {
+@media screen and (max-width: 1080px) and (min-width: 900px) {
   .container {
     font-size: 0.9rem !important;
     width: 900px;
@@ -41,6 +41,7 @@
 .th {
   padding: 1rem !important;
   background-color: var(--bgSecondary);
+  
 }
 @media screen and (max-width: 1000px) {
   .th {
@@ -102,4 +103,13 @@
   .maxK {
     display: none;
   }
+}
+
+
+.green{
+  color: var(--green);
+} 
+
+.red {
+  color: var(--red);
 }
