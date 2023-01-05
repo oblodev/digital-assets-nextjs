@@ -2,8 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   width: 100%;
+}
+.footer.dark {
+  background-color: var(--bgDark);
+  color: #fff;
 }
 
 .footer p {

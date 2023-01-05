@@ -6,8 +6,15 @@ import { motion } from "framer-motion";
 import moment from "moment";
 import "moment/locale/de";
 
+import { useTheme } from "../hooks/useTheme";
+
 function News({ germanNews }) {
-  console.log(germanNews);
+  const { changeMode, mode } = useTheme();
+
+  const toggleMode = () => {
+    changeMode(mode === "light" ? "dark" : "light");
+  };
+
   return (
     <div className={styles.news}>
       <motion.div
@@ -15,7 +22,7 @@ function News({ germanNews }) {
         transition={{ duration: 0.65 }}
         className={styles.heading}
       >
-        <h2 className={styles.newsHeader} id="News">
+        <h2 className={`${styles.newsHeader} ${styles[mode]}`} id="News">
           <span>// </span>Aktuelle Krypto-News
         </h2>
         <div></div>

@@ -14,6 +14,10 @@
   transition: all 0.35s ease-in-out;
 }
 
+.container.dark {
+  background-color: var(--bgDark);
+}
+
 @media screen and (max-width: 450px) {
   .container {
     padding: 0.5rem 0.5rem;
@@ -60,14 +64,14 @@
   flex-direction: column;
   list-style-type: none;
 }
-.linksWrapper a {
+.linksWrapper {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 500;
   font-size: 1.05rem;
   transition: all 0.3s ease-in-out;
 }
-.linksWrapper a.dark {
+.linksWrapper .dark {
   color: #fff;
 }
 .linksWrapper a:hover {
@@ -146,7 +150,7 @@
   width: 24px;
   height: 24px;
 }
-.navbarSideIcon.dark {
+.navbarSideIcon .dark {
   color: var(--text-dark);
 }
 
@@ -164,6 +168,10 @@
   height: 24px;
   cursor: pointer;
   color: var(--text-primary);
+}
+
+.navbarModeIcon .dark {
+  color: var(--text-dark);
 }
 .x {
   cursor: pointer;

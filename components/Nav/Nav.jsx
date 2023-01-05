@@ -12,13 +12,26 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
+import { useTheme } from "../../hooks/useTheme";
+
 function Nav() {
   const [toggleSide, setToggleSide] = useState(false);
+
+  const { changeMode, mode } = useTheme();
+
+  const toggleMode = () => {
+    changeMode(mode === "light" ? "dark" : "light");
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[mode]}`}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src={logo} alt="logo" className={styles.logoImage} />
+          <Image
+            src={mode === "dark" ? logoLight : logo}
+            alt="logo"
+            className={styles.logoImage}
+          />
         </Link>
       </div>
       <div className={styles.linksWrapper}>
@@ -26,14 +39,16 @@ function Nav() {
           {["Statistiken", "Kryptowährungen", "News"].map((item) => (
             <li key={`link-${item}`}>
               <div></div>
-              <Link href={`/#${item}`}>{item}</Link>
+              <Link href={`/#${item}`} className={styles[mode]}>
+                {item}
+              </Link>
             </li>
           ))}
         </ul>
         <div className={styles.navbarSide}>
           <RiMenu4Fill
             onClick={() => setToggleSide(true)}
-            className={styles.navbarSideIcon}
+            className={`${styles.navbarSideIcon} ${styles[mode]}`}
           />
           {toggleSide && (
             <motion.div
@@ -58,8 +73,8 @@ function Nav() {
         </div>
         <div className={styles.navbarMode}>
           <BiBrightnessHalf
-            className={styles.navbarModeIcon}
-            onClick={() => setToggleSide(false)}
+            className={`${styles.navbarModeIcon} ${styles[mode]}`}
+            onClick={toggleMode}
           />
         </div>
       </div>

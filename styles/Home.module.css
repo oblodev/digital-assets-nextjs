@@ -6,3 +6,7 @@
   min-height: 100vh;
   padding-top: 5rem;
 }
+
+.main.dark {
+  background-color: var(--bgDark);
+}

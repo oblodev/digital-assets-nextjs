@@ -1,17 +1,23 @@
 import styles from "../styles/Statistiken.module.css";
 import { motion } from "framer-motion";
 import { NumericFormat } from "react-number-format";
+import { useTheme } from "../hooks/useTheme";
 
 function Statistiken({ stats }) {
+  const { changeMode, mode } = useTheme();
+
+  const toggleMode = () => {
+    changeMode(mode === "light" ? "dark" : "light");
+  };
   const globalStats = stats.data;
   return (
-    <div className={styles.statistiken}>
+    <div className={`${styles.statistiken} ${styles[mode]}`}>
       <motion.div
         whileInView={{ y: [40, 0], opacity: [0, 1] }}
         transition={{ duration: 0.65 }}
         className={styles.heading}
       >
-        <h1 className={styles.header} id="Statistiken">
+        <h1 className={`${styles.header} ${styles[mode]}`} id="Statistiken">
           <span>// </span>Globale Krypto-Statistiken
         </h1>
 

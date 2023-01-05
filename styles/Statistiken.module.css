@@ -2,6 +2,10 @@
   margin-top: 5rem;
 }
 
+.statistiken.dark {
+  background-color: var(--bgDark);
+}
+
 @media screen and (max-width: 450px) {
   .statistiken {
     margin-top: 2rem;
