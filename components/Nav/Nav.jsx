@@ -36,14 +36,28 @@ function Nav() {
       </div>
       <div className={styles.linksWrapper}>
         <ul className={styles.links}>
-          {["Statistiken", "Kryptowährungen", "News"].map((item) => (
-            <li key={`link-${item}`}>
-              <div></div>
-              <Link href={`/#${item}`} className={styles[mode]}>
-                {item}
-              </Link>
-            </li>
-          ))}
+          <li key={`link-statistiken`}>
+            <div></div>
+            <Link href="/#Statistiken" className={styles[mode]} scroll={false}>
+              Statistiken
+            </Link>
+          </li>
+          <li key={`link-kryptowährungen`}>
+            <div></div>
+            <Link
+              href="/#Kryptowaehrungen"
+              className={styles[mode]}
+              scroll={false}
+            >
+              Kryptowährungen
+            </Link>
+          </li>
+          <li key={`link-news`}>
+            <div></div>
+            <Link href="/#News" className={styles[mode]} scroll={false}>
+              News
+            </Link>
+          </li>
         </ul>
         <div className={styles.navbarSide}>
           <RiMenu4Fill

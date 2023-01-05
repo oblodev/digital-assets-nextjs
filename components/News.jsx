@@ -23,7 +23,7 @@ function News({ germanNews }) {
         className={styles.heading}
       >
         <h2 className={`${styles.newsHeader} ${styles[mode]}`} id="News">
-          <span>// </span>Aktuelle Krypto-News
+          <span>{"//"} </span>Aktuelle Krypto-News
         </h2>
         <div></div>
       </motion.div>
@@ -39,6 +39,7 @@ function News({ germanNews }) {
               target="_blank"
               rel="noreferrer"
               className={styles.newsLink}
+              key={news.id}
             >
               <div className={styles.newsCard}>
                 <div className={styles.newsHead}>

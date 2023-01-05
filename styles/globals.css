@@ -17,7 +17,7 @@
   --violett: #5e17eb;
   --turkis: #5ce1e6;
   --red: #f91e5a;
-  --green:#00cc00;
+  --green: #00cc00;
 }
 
 * {
@@ -34,6 +34,7 @@ body {
   font-family: var(--primary-font);
   background: var(--bgPrimary);
   color: var(--text-primary);
+  scroll-behavior: smooth;
 }
 
 a {

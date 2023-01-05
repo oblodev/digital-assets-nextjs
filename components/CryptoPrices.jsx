@@ -18,10 +18,12 @@ function CryptoPrices({ cryptos }) {
         transition={{ duration: 0.65 }}
         className={`${styles.heading} ${styles[mode]}`}
       >
-        <h1 id="Kryptowährungen">
-          <span>// </span>Die 10 besten Kryptowährungen nach
-          Marktkapitalisierung
-        </h1>
+        <div id="Kryptowaehrungen">
+          <h1>
+            <span>{"//"} </span>Die 10 besten Kryptowährungen nach
+            Marktkapitalisierung
+          </h1>
+        </div>
       </motion.div>
       <motion.div
         whileInView={{ opacity: [0, 1] }}

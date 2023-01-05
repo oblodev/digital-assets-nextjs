@@ -18,7 +18,7 @@ function Statistiken({ stats }) {
         className={styles.heading}
       >
         <h1 className={`${styles.header} ${styles[mode]}`} id="Statistiken">
-          <span>// </span>Globale Krypto-Statistiken
+          <span>{"//"} </span>Globale Krypto-Statistiken
         </h1>
 
         <div></div>
