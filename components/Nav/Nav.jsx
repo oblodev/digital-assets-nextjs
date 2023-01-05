@@ -18,13 +18,7 @@ function Nav() {
     <div className={styles.container}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image
-            src={logo}
-            alt="logo"
-            className={styles.logoImage}
-            height={100}
-            width={300}
-          />
+          <Image src={logo} alt="logo" className={styles.logoImage} />
         </Link>
       </div>
       <div className={styles.linksWrapper}>

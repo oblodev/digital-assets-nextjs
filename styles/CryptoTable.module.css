@@ -12,26 +12,39 @@
 }
 @media screen and (max-width: 450px) {
   .container {
-    max-width: 425px;
-    font-size: 0.8rem;
-  }
-}
-@media screen and (max-width: 899px) and (min-width: 451px) {
-  .container {
-    max-width: 600px;
+    max-width: 380px;
     font-size: 0.8rem !important;
+    margin: auto;
+    padding: 0.45rem 0.2rem;
   }
 }
-@media screen and (max-width: 1080px) and (min-width: 900px) {
+@media screen and (max-width: 600px) and (min-width: 451px) {
+  .container {
+    max-width: 550px;
+    font-size: 0.8rem !important;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+  .container {
+    max-width: 670px;
+    font-size: 0.8rem !important;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1080px) and (min-width: 901px) {
   .container {
     font-size: 0.9rem !important;
-    width: 900px;
+    max-width: 900px;
+    margin: auto;
   }
 }
 @media screen and (max-width: 1200px) {
   .container {
     font-size: 1rem !important;
-    width: 980px;
+    width: auto;
+    margin: auto;
   }
 }
 
@@ -41,7 +54,6 @@
 .th {
   padding: 1rem !important;
   background-color: var(--bgSecondary);
-  
 }
 @media screen and (max-width: 1000px) {
   .th {
@@ -84,16 +96,7 @@
   width: 24px;
   margin-right: 8px;
 }
-@media screen and (max-width: 420px) {
-  .ds {
-    display: none;
-  }
-}
-@media screen and (max-width: 800px) and (min-width: 421px) {
-  .ds {
-    display: none;
-  }
-}
+
 @media screen and (max-width: 900px) {
   .maxK {
     display: none;
@@ -105,11 +108,45 @@
   }
 }
 
-
-.green{
+.green {
   color: var(--green);
-} 
+}
 
 .red {
   color: var(--red);
+}
+
+.notGreen {
+  color: var(--green);
+}
+
+.notRed {
+  color: var(--red);
+}
+
+@media screen and (max-width: 450px) {
+  .not {
+    display: none;
+  }
+
+  .notGreen {
+    display: none;
+  }
+
+  .notRed {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 451px) {
+  .not {
+    display: none;
+  }
+
+  .notGreen {
+    display: none;
+  }
+
+  .notRed {
+    display: none;
+  }
 }

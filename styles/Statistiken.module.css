@@ -2,6 +2,12 @@
   margin-top: 5rem;
 }
 
+@media screen and (max-width: 450px) {
+  .statistiken {
+    margin-top: 2rem;
+  }
+}
+
 .header {
   font-size: 1.6rem;
   font-weight: 700;
@@ -14,24 +20,18 @@
 .header.dark {
   color: var(--text-dark);
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .header {
     font-size: 1.2rem;
     text-align: center;
   }
 }
-@media screen and (max-width: 899px) and (min-width: 421px) {
+@media screen and (max-width: 900px) and (min-width: 451px) {
   .header {
     text-align: center !important;
   }
 }
-@media screen and (max-width: 900px) {
-  .header {
-    flex: 1;
-    text-align: left;
-    margin-left: 2.5rem;
-  }
-}
+
 .header span {
   color: var(--turkis);
 }
@@ -41,18 +41,18 @@
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .stats {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 560px) and (min-width: 421px) {
+@media screen and (max-width: 560px) and (min-width: 451px) {
   .stats {
     display: flex;
     flex-direction: column;
   }
 }
-@media screen and (max-width: 899px) and (min-width: 561px) {
+@media screen and (max-width: 900px) and (min-width: 561px) {
   .stats {
     text-align: center;
     display: grid;
@@ -75,12 +75,12 @@
   background: var(--bgDarkCard);
   transition: all 0.35s ease-in-out;
 }
-@media screen and (max-width: 899px) and (min-width: 421px) {
+@media screen and (max-width: 900px) and (min-width: 451px) {
   .card {
     padding: 2rem 1rem;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .card:nth-child(2) {
     padding-right: 3.8rem;
     padding-left: 3.8rem;
@@ -102,7 +102,7 @@
   margin-top: 0rem;
   padding-bottom: 1rem;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .card:nth-child(4) {
     margin-top: 1rem;
   }

@@ -10,17 +10,13 @@ import { motion } from "framer-motion";
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <motion.div
-      whileInView={{ y: [40, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.65 }}
-      className={styles.footer}
-    >
+    <div className={styles.footer}>
       <Image src={logo} alt="logo" width={140} />
       <p>
         Created by <Link href="https://dkostka.dev">dkostka.dev</Link> &copy;{" "}
         {year}
       </p>
-    </motion.div>
+    </div>
   );
 }
 

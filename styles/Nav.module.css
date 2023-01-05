@@ -14,6 +14,12 @@
   transition: all 0.35s ease-in-out;
 }
 
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
 .logo {
   cursor: pointer;
   height: 90px;
@@ -25,17 +31,23 @@
   }
 }
 
+.logoImage {
+  width: 240px;
+  height: 90px;
+}
 
-
-
+@media screen and (max-width: 450px) {
+  .logoImage {
+    width: 210px;
+    height: 80px;
+  }
+}
 
 .linksWrapper {
   display: flex;
   flex-direction: row !important;
   justify-content: center;
   align-items: center;
-
-
 }
 
 .linksWrapper ul {
@@ -138,9 +150,7 @@
   color: var(--text-dark);
 }
 
-
-
-@media screen and  (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .navbarSideIcon {
     display: none;
   }

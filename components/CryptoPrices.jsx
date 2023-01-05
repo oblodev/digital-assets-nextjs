@@ -12,7 +12,7 @@ function CryptoPrices({ cryptos }) {
         transition={{ duration: 0.65 }}
         className={styles.heading}
       >
-        <h1 className={styles.header} id="Kryptowährungen">
+        <h1 id="Kryptowährungen">
           <span>// </span>Die 10 besten Kryptowährungen nach
           Marktkapitalisierung
         </h1>

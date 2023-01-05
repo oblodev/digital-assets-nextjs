@@ -11,7 +11,6 @@ function CryptoTable({ cryptos }) {
     &:nth-of-type(odd) {
       background-color: #f1f1f1;
     }
-    
   `;
 
   const TableCell = styled.td`
@@ -22,7 +21,6 @@ function CryptoTable({ cryptos }) {
   const Table = styled.table`
     width: 100%;
     border-collapse: collapse;
-    
   `;
   return (
     <div className={styles.container}>
@@ -32,11 +30,19 @@ function CryptoTable({ cryptos }) {
             <TableCell className={styles.th}>#</TableCell>
             <TableCell className={styles.th}>Kryptowährung</TableCell>
             <TableCell className={styles.th}>Kurs</TableCell>
-            <TableCell className={styles.th}>Kurs 1h</TableCell>
+            <TableCell className={`${styles.th} ${styles.not}`}>
+              Kurs 1h
+            </TableCell>
             <TableCell className={styles.th}>Kurs 24h</TableCell>
-            <TableCell className={styles.th}>Kurs 7d</TableCell>
-            <TableCell className={styles.th}>Volumen 24h</TableCell>
-            <TableCell className={styles.th}>MarketCap</TableCell>
+            <TableCell className={`${styles.th} ${styles.not}`}>
+              Kurs 7d
+            </TableCell>
+            <TableCell className={`${styles.th} ${styles.not}`}>
+              Volumen 24h
+            </TableCell>
+            <TableCell className={`${styles.th} ${styles.not}`}>
+              MarketCap
+            </TableCell>
           </TableRow>
         </TableBody>
         <TableBody>
@@ -62,7 +68,9 @@ function CryptoTable({ cryptos }) {
                 </TableCell>
                 <TableCell
                   className={
-                    crypto.price_change_percentage_1h_in_currency > 0 ? styles.green : styles.red
+                    crypto.price_change_percentage_1h_in_currency > 0
+                      ? styles.notGreen
+                      : styles.notRed
                   }
                 >
                   {crypto.price_change_percentage_1h_in_currency.toFixed(2)}%
@@ -73,20 +81,19 @@ function CryptoTable({ cryptos }) {
                       ? styles.green
                       : styles.red
                   }
-                  
                 >
                   {crypto.price_change_percentage_24h.toFixed(2)}%
                 </TableCell>
                 <TableCell
                   className={
                     crypto.price_change_percentage_7d_in_currency > 0
-                      ? styles.green
-                      : styles.red
+                      ? styles.notGreen
+                      : styles.notRed
                   }
                 >
                   {crypto.price_change_percentage_7d_in_currency.toFixed(2)}%
                 </TableCell>
-                <TableCell className={styles.ds}>
+                <TableCell className={`${styles.ds} ${styles.not}`}>
                   {
                     <NumericFormat
                       thousandsGroupStyle="thousand"
@@ -100,7 +107,7 @@ function CryptoTable({ cryptos }) {
                   }
                   $
                 </TableCell>
-                <TableCell className={styles.td}>
+                <TableCell className={`${styles.ds} ${styles.not}`}>
                   {
                     <NumericFormat
                       thousandsGroupStyle="thousand"

@@ -1,5 +1,6 @@
 import styles from "../styles/News.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import NewsImg from "../public/images/News.png";
 import { motion } from "framer-motion";
 import moment from "moment";
@@ -26,7 +27,12 @@ function News({ germanNews }) {
       >
         {germanNews ? (
           germanNews.slice(0, 9).map((news) => (
-            <a href={news.url} target="_blank" rel="noreferrer">
+            <Link
+              href={news.url}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.newsLink}
+            >
               <div className={styles.newsCard}>
                 <div className={styles.newsHead}>
                   <Image
@@ -46,7 +52,7 @@ function News({ germanNews }) {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
           ))
         ) : (
           <div>

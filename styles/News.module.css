@@ -2,9 +2,17 @@
   margin-bottom: 6rem;
   width: 1200px;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .news {
     margin-bottom: 4rem;
+    max-width: 390px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 451px) {
+  .news {
+    max-width: 720px;
+    padding: 1rem;
   }
 }
 .newsHeader {
@@ -19,7 +27,7 @@
   color: var(--text-dark);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .newsHeader {
     font-size: 1.2rem;
     padding-left: 1rem;
@@ -28,7 +36,7 @@
     flex: 1;
   }
 }
-@media screen and (max-width: 899px) and (min-width: 421px) {
+@media screen and (max-width: 900px) and (min-width: 451px) {
   .newsHeader {
     text-align: center !important;
   }
@@ -36,7 +44,7 @@
 @media screen and (max-width: 1200px) {
   .newsHeader {
     flex: 1;
-    text-align: left;
+    text-align: center;
     margin-left: 2.4rem;
   }
 }
@@ -51,22 +59,28 @@
 }
 @media screen and (max-width: 450px) {
   .newsShow {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
-@media screen and (min-width: 451px) and (max-width: 900px) {
+@media screen and (min-width: 451px) and (max-width: 670px) {
+  .newsShow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 671px) and (max-width: 900px) {
   .newsShow {
     grid-template-columns: 1fr 1fr;
   }
 }
-.newsShow a {
-  text-decoration: none;
-  color: var(--text-primary);
-}
-.newsShow a:hover {
-  color: var(--text-primary);
-}
-.newsShow .newsCard {
+
+.newsCard {
   width: 320px;
   height: auto;
   margin: 2rem 0.75rem;
@@ -80,77 +94,85 @@
   overflow: hidden;
   transition: all 0.35s ease-in-out;
 }
-.newsShow .newsCard.dark {
+.newsCard.dark {
   background: var(--bgDarkCard);
 }
 @media screen and (max-width: 1200px) {
-  .newsShow .newsCard {
-    width: 280px;
+  .newsCard {
+    width: 300px;
   }
 }
 @media screen and (max-width: 900px) {
-  .newsShow .newsCard {
-    width: 400px;
+  .newsCard {
+    width: 310px;
   }
 }
-@media screen and (max-width: 420px) {
-  .newsShow .newsCard {
-    width: 280px;
+@media screen and (max-width: 450px) {
+  .newsCard {
+    width: 315px;
   }
 }
-.newsShow .newsCard:hover {
+.newsCard:hover {
   box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.25);
 }
-.newsShow .newsCard p {
+.newsCard p {
   font-size: 0.93rem;
 }
-.newsShow .newsCard .newsHead {
+.newsCard .newsHead {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
-.newsShow .newsCard .newsHead:hover {
+.newsCard .newsHead:hover {
   color: #f91e5a;
 }
-.newsShow .newsCard .news-head h3 {
+.newsCard .news-head h3 {
   font-size: 1.15rem;
   font-weight: 700;
 }
-.newsShow .newsCard .news-head h3:hover {
+
+@media screen and (max-width: 450px) {
+  .newsCard .news-head h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+.newsCard .news-head h3:hover {
   color: #f91e5a;
 }
-.newsShow .newsCard img {
+.newsCard img {
   max-width: 260px;
   max-height: 160px;
   margin-bottom: 1rem;
 }
 @media screen and (max-width: 900px) {
-  .newsShow .newsCard img {
+  .newsCard img {
     max-width: 360px;
     max-height: 190px;
   }
 }
-.newsShow .newsCard .newsInfos {
+.newsCard .newsInfos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.newsShow .newsCard .newsInfos .newsRights {
+.newsCard .newsInfos .newsRights {
   font-weight: 700;
   font-size: 12px;
   margin-bottom: 0.5rem;
 }
-@media screen and (max-width: 420px) {
-  .newsShow .newsCard .newsInfos .newsRights {
+@media screen and (max-width: 450px) {
+  .newsCard .newsInfos .newsRights {
     font-size: 10px;
   }
 }
-.newsShow .newsCard .newsInfos .newsTime {
+.newsCard .newsInfos .newsTime {
   font-size: 10px;
 }
-@media screen and (max-width: 420px) {
-  .newsShow .nnewsCard .newsInfos .newsTime {
+@media screen and (max-width: 450px) {
+  .newsCard .newsInfos .newsTime {
     font-size: 10px;
   }
 }
