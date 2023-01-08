@@ -65,5 +65,6 @@ export async function getStaticProps() {
       cryptos: dataCrypto,
       germanNews: newsData,
     },
+    revalidate: 60,
   };
 }
