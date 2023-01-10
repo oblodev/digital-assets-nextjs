@@ -15,6 +15,7 @@ export default function Home({ stats, cryptos, germanNews }) {
   const toggleMode = () => {
     changeMode(mode === "light" ? "dark" : "light");
   };
+
   return (
     <>
       <Head>
@@ -38,6 +39,12 @@ export default function Home({ stats, cryptos, germanNews }) {
 }
 
 export async function getStaticProps() {
+  let today = new Date();
+  let yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+  let isoString = yesterday.toISOString();
+  let formattedDate = isoString.slice(0, 10);
+
   const resStats = await fetch("https://api.coingecko.com/api/v3/global");
   const dataStats = await resStats.json();
 
@@ -46,16 +53,10 @@ export async function getStaticProps() {
   );
   const dataCrypto = await resCrypto.json();
 
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "965544b128msh602fdb4437bf366p1faec3jsnd3773b9075b7",
-      "X-RapidAPI-Host": "german-cryptonews-api.p.rapidapi.com",
-    },
-  };
+  const apiKey = process.env.NEWS_API_KEY;
+
   const resNews = await fetch(
-    "https://german-cryptonews-api.p.rapidapi.com/news",
-    options
+    `https://newsapi.org/v2/everything?q=krypto&language=de&from=${formattedDate}&sortBy=publishedAt&apiKey=${apiKey}`
   );
   const newsData = await resNews.json();
 
@@ -65,6 +66,6 @@ export async function getStaticProps() {
       cryptos: dataCrypto,
       germanNews: newsData,
     },
-    revalidate: 60,
+    revalidate: 120,
   };
 }

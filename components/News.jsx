@@ -9,6 +9,8 @@ import "moment/locale/de";
 import { useTheme } from "../hooks/useTheme";
 
 function News({ germanNews }) {
+  const germanNewss = germanNews.articles;
+
   const { changeMode, mode } = useTheme();
 
   const toggleMode = () => {
@@ -32,8 +34,8 @@ function News({ germanNews }) {
         transition={{ duration: 0.65 }}
         className={styles.newsShow}
       >
-        {germanNews ? (
-          germanNews.slice(0, 9).map((news) => (
+        {germanNewss ? (
+          germanNewss.slice(0, 9).map((news) => (
             <Link
               href={news.url}
               target="_blank"
@@ -44,7 +46,7 @@ function News({ germanNews }) {
               <div className={styles.newsCard}>
                 <div className={styles.newsHead}>
                   <Image
-                    src={news?.image || NewsImg}
+                    src={news?.urlToImage || NewsImg}
                     alt="news-image"
                     className={styles.newsImage}
                     width={260}
@@ -54,9 +56,9 @@ function News({ germanNews }) {
                 </div>
 
                 <div className={styles.newsInfo}>
-                  <p className={styles.newsRights}>{news.source}</p>
+                  <p className={styles.newsRights}>{news.source.name}</p>
                   <p className="news-time">
-                    {moment(news.date).startOf("hour").fromNow()}
+                    {moment(news.publishedAt).startOf("hour").fromNow()}
                   </p>
                 </div>
               </div>
