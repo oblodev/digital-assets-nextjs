@@ -17,7 +17,7 @@ const nextConfig = {
     ],
   },
   env: {
-    NEWS_API_KEY: "f2f74f91d1d641d6beb41e834687baf0",
+    NEWS_API_KEY: "@news-api-key",
   },
 };
 
