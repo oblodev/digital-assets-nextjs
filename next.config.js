@@ -14,10 +14,16 @@ const nextConfig = {
       "www.diepresse.com",
       "cdn.businessinsider.de",
       "images.bild.de",
+      "media1.faz.net",
+      "ibs.orf.at",
+      "img.netzwelt.de",
+      "crops.giga.de",
+      "www.tagesspiegel.de",
+      "assets.t3n.de",
     ],
   },
   env: {
-    NEWS_API_KEY: "@news-api-key",
+    NEWS_API_KEY: "f2f74f91d1d641d6beb41e834687baf0",
   },
 };
 

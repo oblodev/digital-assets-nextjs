@@ -40,6 +40,11 @@ export default function Home({ stats, cryptos, germanNews }) {
 }
 
 export async function getStaticProps() {
+  let today = new Date();
+  let yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+  let isoString = yesterday.toISOString();
+  let formattedDate = isoString.slice(0, 10);
   const resStats = await fetch("https://api.coingecko.com/api/v3/global");
   const dataStats = await resStats.json();
 
@@ -47,8 +52,11 @@ export async function getStaticProps() {
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d"
   );
   const dataCrypto = await resCrypto.json();
-  const url = `https://digitalassets.at/api/hello`;
-  const resNews = await fetch(url);
+  const apiKey = process.env.NEWS_API_KEY;
+
+  const resNews = await fetch(
+    `https://newsapi.org/v2/everything?q=krypto&language=de&from=${formattedDate}&sortBy=publishedAt&apiKey=${apiKey}`
+  );
   const newsData = await resNews.json();
 
   return {
