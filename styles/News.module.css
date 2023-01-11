@@ -30,8 +30,6 @@
 @media screen and (max-width: 450px) {
   .newsHeader {
     font-size: 1.2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
     text-align: center;
     flex: 1;
   }
@@ -41,11 +39,11 @@
     text-align: center !important;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 901px) {
   .newsHeader {
     flex: 1;
     text-align: center;
-    margin-left: 2.4rem;
+    margin-left: 2rem;
   }
 }
 .newsHeader span {

@@ -1,6 +1,6 @@
 {
   "name": "digital-assets-next-app",
-  "version": "0.7.9",
+  "version": "0.8.7",
   "private": true,
   "scripts": {
     "dev": "next dev",

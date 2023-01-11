@@ -12,7 +12,8 @@ const nextConfig = {
       "www.tagesschau.de",
       "www.welt.de",
       "www.diepresse.com",
-      "www.businessinsider.de",
+      "cdn.businessinsider.de",
+      "images.bild.de",
     ],
   },
   env: {
