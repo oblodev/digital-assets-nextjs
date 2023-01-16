@@ -20,6 +20,10 @@ const nextConfig = {
       "crops.giga.de",
       "www.tagesspiegel.de",
       "assets.t3n.de",
+      "www.horizont.net",
+      "www.jungewelt.de",
+      "static.politico.com",
+      "img.nzz.ch",
     ],
   },
   env: {
