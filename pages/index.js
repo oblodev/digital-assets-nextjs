@@ -55,7 +55,7 @@ export async function getStaticProps() {
   const apiKey = process.env.NEWS_API_KEY;
 
   const resNews = await fetch(
-    `https://newsapi.org/v2/everything?q=krypto&language=de&from=${formattedDate}&sortBy=publishedAt&apiKey=${apiKey}`
+    `https://newsapi.org/v2/everything?q=krypto+OR+bitcoin+OR+ethereum+OR+binance+OR+web3+OR+cardano+OR+crypto&language=de&from=${formattedDate}&sortBy=publishedAt&apiKey=${apiKey}`
   );
   const newsData = await resNews.json();
 
