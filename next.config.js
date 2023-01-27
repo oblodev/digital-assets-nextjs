@@ -24,6 +24,10 @@ const nextConfig = {
       "www.jungewelt.de",
       "static.politico.com",
       "img.nzz.ch",
+      "static.dw.com",
+      "mma.prnewswire.com",
+      "image.stern.de",
+      "www.wiwo.de",
     ],
   },
   env: {
